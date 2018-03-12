@@ -10,15 +10,15 @@
 
 using namespace std;
 
-class Guppy
+class Guppy : public Ikan
 {
 private:
 	int growthStage;
 
-
 public:
 	Guppy(int a, int b); // : Benda(a,b,s)
 	~Guppy();
+	void Makan(MakananIkan& M);
 	
 };
 
