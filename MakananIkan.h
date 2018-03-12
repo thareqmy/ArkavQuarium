@@ -8,7 +8,8 @@ using namespace std;
 class MakananIkan
 {
 public:
-	MakananIkan();
+	// a untuk koordinat x di Aquarium
+	MakananIkan(int a);
 	~MakananIkan();
 	
 };
