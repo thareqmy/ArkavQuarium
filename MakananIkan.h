@@ -5,13 +5,15 @@
 
 using namespace std;
 
-class MakananIkan
-{
-public:
-	// a untuk koordinat x di Aquarium
-	MakananIkan(int a);
-	~MakananIkan();
-	
+class MakananIkan : public Benda {
+	public :
+		MakananIkan();
+		MakananIkan(int,int);
+		~MakananIkan();
+
+		bool operator == (const MakananIkan&);
+		void moveDown();
+	private :
 };
 
 #endif
