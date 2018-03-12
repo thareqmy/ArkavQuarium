@@ -15,8 +15,8 @@ private:
 	//Kumpulan Koin yang ada di akuarium
 	LinkedList<Koin> coins;
 	
-	//Ukuran akuarium
-	int size;
+	//Ukuran Aquarium
+	int x, y;
 
 
 public:
