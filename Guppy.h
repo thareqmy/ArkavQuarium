@@ -13,11 +13,13 @@ using namespace std;
 class Guppy
 {
 private:
-	int tahapPertumbuhan;
-	int 
+	int growthStage;
+
 
 public:
-	Guppy();
+	Guppy(int a, int b);
+
+
 	~Guppy();
 	
 };

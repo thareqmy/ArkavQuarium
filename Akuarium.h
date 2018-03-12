@@ -8,7 +8,10 @@ using namespace std;
 class Akuarium {
 private:
 	LinkedList<Ikan> fishes;
-	LinkedList
+	LinkedList<MakananIkan> foods;
+	LinkedList<Koin> coins;
+	
+	
 	int size;
 
 

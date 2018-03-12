@@ -5,21 +5,26 @@
 #define HadapRight 0
 
 #include <iostream>
-#include "BendaAir.h"
+#include "Benda.h"
 
 using namespace std;
 
 class Ikan
 : public Benda{
-private:
-	const int waktuKenyang;
-	const int waktuLapar;
-	int mukaMenghadap;
-	int countMakanan;
+protected:
+	const int fullTimer;
+	const int starveTimer;
+	const int producedCoin;
+	int FaceDIrection;
+	int countFood;
 	
 public:
-	 Ikan();
-	~ Ikan();
+	Ikan(int a, int b, int s);
+	void eat(MakananIkan& m) = 0;
+	void catchFood();
+	void producedCOin() = 0;
+
+	~Ikan();
 	
 };
 

@@ -11,17 +11,22 @@ class Benda
 protected:
 	int x;
 	int y;
+	int speed;
 
 public:
 	 Benda();
-	 Benda(int a, int b);
+	 Benda(int a, int b, int s);
 
 	 //SETTER&GETTER
 	 void setX(int a);
 	 void setY(int b);
+	 void setSpeed(int s);
 
 	 int getX() const;
 	 int getY() const;
+	 int getSpeed() const;
+
+	 void move(int movement);
 
 	 void moveUp();
 	 void moveDown();
@@ -33,7 +38,7 @@ public:
 	 void moveDownRight();
 	 void moveDownLeft();
 
-	 bool operator==(const BendaAir& b) const;
+	 bool operator==(const Benda& b) const;
 
 	
 };
