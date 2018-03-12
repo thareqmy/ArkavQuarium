@@ -8,7 +8,7 @@ using namespace std;
 class Koin
 {
 public:
-	//a untuk kooordinat x di aquarium
+	//a untuk koordinat x di aquarium
 	//b untuk koordinat y di aquarium
 	Koin(int a,int b);
 	~Koin();
