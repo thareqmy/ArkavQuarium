@@ -6,13 +6,17 @@
 
 using namespace std;
 
-class Piranha : public Ikan
-{
-public:
-	//a untuk koordinat x, b untuk koordinat y, s untuk speed
-	Piranha(int a,int b); //: Benda(a,b,s)
-	~Piranha();
-	
+class Piranha : public Ikan {
+	public:
+		Piranha();
+		Piranha(int,int);
+		~Piranha();
+		bool operator == (const Piranha&);
+		// void gerak();
+		void makan();
+		Guppy getGuppyTerdekat(LinkedList<Guppy>);
+		Koin buatKoin();
+	private :
 };
 
 #endif
