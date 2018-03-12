@@ -12,7 +12,6 @@ class Koin : public Benda {
 		~Koin(); // Koin akan hancur jika dimakan oleh siput
 
 		bool operator == (const Koin&);
-		void dimakanSiput();
 		void KoinJatuh();
 		void setValue(int);
 		int getValue() const;
