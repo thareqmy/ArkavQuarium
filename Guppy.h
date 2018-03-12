@@ -10,16 +10,24 @@
 
 using namespace std;
 
-class Guppy : public Ikan
-{
-private:
-	int growthStage;
-
-public:
-	Guppy(int a, int b); // : Benda(a,b,s)
-	~Guppy();
-	void Makan(MakananIkan& M);
-	
+class Guppy : public Ikan {
+	public :
+		Guppy();
+		Guppy(int,int);
+		~Guppy();
+		bool operator == (const Guppy&);
+		void makan();
+		// void gerak();
+		void setFase(int);
+		void nextFase();
+		void setFrekuensiMakan(int);
+		int getFase() const;
+		int getFrekuensiMakan() const;
+		Koin buatKoin();
+		MakananIkan getMakananIkanTerdekat(LinkedList<MakananIkan>);
+	private :
+		int fase;
+		int frekuensimakan; // jika sudah x kali makan akan membesar
 };
 
 #endif
