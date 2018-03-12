@@ -10,7 +10,7 @@ class Piranha : public Ikan
 {
 public:
 	//a untuk koordinat x, b untuk koordinat y, s untuk speed
-	Piranha(int a, int b, int s); //: Benda(a,b,s)
+	Piranha(int a,int b); //: Benda(a,b,s)
 	~Piranha();
 	
 };
