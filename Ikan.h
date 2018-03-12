@@ -26,10 +26,10 @@ protected:
 public:
 	// a untuk x, b untuk y, s untuk speed dan akan memanggil ctor Benda
 	Ikan(int a, int b, int s);
-	//
-	void eat(MakananIkan& m) = 0;
+	//Prosedur untuk ikan mencari makanan
 	void catchFood();
-	void producedCOin() = 0;
+	//proseduc untuk ikan menghasilkan koin
+	void producedCoin();
 
 	~Ikan();
 	
