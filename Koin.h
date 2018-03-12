@@ -5,13 +5,19 @@
 
 using namespace std;
 
-class Koin
-{
-public:
-	//a untuk koordinat x di aquarium
-	//b untuk koordinat y di aquarium
-	Koin(int a,int b);
-	~Koin();
+class Koin : public Benda {
+	public :
+		Koin();
+		Koin(int,int,int);
+		~Koin(); // Koin akan hancur jika dimakan oleh siput
+
+		bool operator == (const Koin&);
+		void dimakanSiput();
+		void KoinJatuh();
+		void setValue(int);
+		int getValue() const;
+	private :
+		int value;
 	
 };
 
