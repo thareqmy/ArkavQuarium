@@ -17,9 +17,7 @@ private:
 
 
 public:
-	Guppy(int a, int b);
-
-
+	Guppy(int a, int b, int s); // : Benda(a,b,s)
 	~Guppy();
 	
 };
