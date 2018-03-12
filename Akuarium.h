@@ -22,6 +22,8 @@ private:
 public:
 	 Akuarium();
 	~Akuarium();
+	
+	virtual void nextTurn();
 
 
 };
