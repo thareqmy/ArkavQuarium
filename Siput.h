@@ -11,6 +11,7 @@ public:
 	Siput();
 	~Siput();
 	
+	void makanKoin();
 };
 
 #endif
