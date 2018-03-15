@@ -9,14 +9,8 @@
 
 using namespace std;
 
-class Ikan
-: public Benda{
+class Ikan : public Benda, public MahlukHidup{
 protected:
-	//Waktu Ikan bergerak bebas setelah makan
-	const int fullTimer;
-	//Waktu Ikan mencari makanan
-	const int starveTimer;
-	//Koin yang dihasilkan ikan
 	Koin producedCoin;
 	//Muka ikan menghadap kemana
 	int FaceDIrection;
@@ -24,14 +18,17 @@ protected:
 	int countFood;
 	
 public:
-	// a untuk x, b untuk y, s untuk speed dan akan memanggil ctor Benda
-	Ikan(int a, int b, int s);
+	// a untuk x, b untuk y, s untuk speed dan v untuk value koin, memanggil Benda(x,y,s)
+	Ikan(int a, int b, int s, int v);
 	//Prosedur untuk ikan mencari makanan
-	void catchFood();
-	//proseduc untuk ikan menghasilkan koin
-	void producedCoin();
-
-	~Ikan();
+	virtual ~Ikan();
+	
+	//Melakukan abstract data tipe untuk nextTurn
+	virtual void nextTurn(LinkedList<Guppy>&, LinkedList<Piranha>&, LinkedList<Food>&, LinkedList<Coin>&, Snail&) = 0;
+    //Method untuk move disaa ikan bergerak bebas
+    void move();
+    //Melakukan producsi koin terkait
+    void produceCoin(LinkedList<Coin> &coins);
 	
 };
 

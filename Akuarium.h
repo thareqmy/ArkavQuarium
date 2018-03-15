@@ -1,34 +1,43 @@
-#ifndef AKUARIUM_H
-#define AKUARIUM_H
+#ifndef AKUARIUM_H 
+#define AKUARIUM_H 
 
-#include <iostream>
+#include "Guppy.h"
+#include "Piranha.h"
+#include "MakananIkan"
+#include "Koin.h"
+#include "Siput.h"
+#include "LinkedList.h"
+#include <iostream> 
 
-using namespace std;
+using namespace std; 
 
 class Akuarium {
-//Implementasi class yang memiliki atribut-atribut yang ada di akuarium
-private:
-	//Atribut yang berisikan kumpulan ikan yang ada di akuarium
-	LinkedList<Ikan> listIkan;
-	//Kumpulan makanan yang ada di akuarium
-	LinkedList<MakananIkan> listMakanan;
-	//Kumpulan Koin yang ada di akuarium
-	LinkedList<Koin> listKoin;
+  private:
+    LinkedList<Guppy> listGuppy;
+    LinkedList<Piranha> listPiranha;
+    LinkedList<MakananIkan> listMakananIkan;
+    LinkedList<Koin> listKoin;
+    Siput siput;
+    int putaran;
 
-	//Ukuran Aquarium
-	int x, y;
+  public:
+    Akuarium();
+    Akuarium(const Akuarium&);
+    Akuarium& operator=(const Akuarium&);
+    ~Akuarium();
 
-public:
-	// Konstruktor
-	Akuarium();
-	Akuarium(const Akuarium&);
-	// Destruktor
-	~Akuarium();
-	// Assign
-	Akuarium& operator=(const Akuarium&);
-
-	// Method Function
-	void nextTurn();
+    //Menambah putaran lalu melakukan method nextTurn ke seluruh benda yang ada di akuarium
+    void nextTurn();
+    //Melakukan penambahan guppy di akuarium
+    void operator<<(const Guppy &guppy);
+    //Melakukan penambahan piranha di akuarium
+    void operator<<(const Piranha &piranha);
+    //Melakukan penambahan makananikan di akuarium
+    void operator<<(const MakananIkan &makananIkan);
+    //Melakukan penambahan nextturn
+    void operator++();
 };
+
+#endif
 
 #endif

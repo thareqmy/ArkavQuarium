@@ -99,7 +99,7 @@ public:
 		return temp->infoNode;
 	}
 
-	print() {
+	void print() {
 		if (isEmpty()) {
 			cout << "LIST KOSONG" << endl;
 		} else {
