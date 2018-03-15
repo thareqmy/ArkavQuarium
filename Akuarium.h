@@ -6,26 +6,29 @@
 using namespace std;
 
 class Akuarium {
-//Implementasi class yang memiliki atribut-atribut yang ada di akuarium	
+//Implementasi class yang memiliki atribut-atribut yang ada di akuarium
 private:
 	//Atribut yang berisikan kumpulan ikan yang ada di akuarium
-	LinkedList<Ikan> fishes;
+	LinkedList<Ikan> listIkan;
 	//Kumpulan makanan yang ada di akuarium
-	LinkedList<MakananIkan> foods;
+	LinkedList<MakananIkan> listMakanan;
 	//Kumpulan Koin yang ada di akuarium
-	LinkedList<Koin> coins;
-	
+	LinkedList<Koin> listKoin;
+
 	//Ukuran Aquarium
 	int x, y;
 
-
 public:
-	 Akuarium();
+	// Konstruktor
+	Akuarium();
+	Akuarium(const Akuarium&);
+	// Destruktor
 	~Akuarium();
-	
-	virtual void nextTurn();
+	// Assign
+	Akuarium& operator=(const Akuarium&);
 
-
+	// Method Function
+	void nextTurn();
 };
 
 #endif
