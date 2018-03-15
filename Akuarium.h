@@ -1,11 +1,8 @@
 #ifndef AKUARIUM_H 
 #define AKUARIUM_H 
 
-#include "Guppy.h"
-#include "Piranha.h"
-#include "MakananIkan"
-#include "Koin.h"
-#include "Siput.h"
+#include "Benda.h"
+#include "MakhlukHidup.h"
 #include "LinkedList.h"
 #include <iostream> 
 
