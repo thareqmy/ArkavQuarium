@@ -1,6 +1,8 @@
 #ifndef BENDA_H
 #define BENDA_H
 
+#include "
+
 #include <iostream>
 
 using namespace std;
@@ -29,7 +31,7 @@ class Benda {
     void moveLeft(); 
 
     virtual void move() = 0; 
-    virtual void nextTurn() = 0; 
+    virtual void nextTurn(LinkedList<Guppy>&, LinkedList<Piranha>&,LinkedList<MakananIkan>&,LinkedList<Koin>&,Siput&) = 0; 
 }; 
 
 #endif
